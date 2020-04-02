@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>PLG_JTCFSHOWON_XML_NAME</name>
+	<author>Guido De Gobbis</author>
+	<creationDate>##DATE##</creationDate>
+	<authorEmail>support@joomtools.de</authorEmail>
+	<authorUrl>https://joomtools.de</authorUrl>
+	<copyright>Copyright ##YEAR## JoomTools.de. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<version>##VERSION##</version>
+	<description>PLG_JTCFSHOWON_XML_DESCRIPTION</description>
+
+	<files>
+		##FILES##
+	</files>
+
+	<updateservers>
+		<server type="extension" priority="1" name="PLG_JTCFSHOWON_XML_NAME">https://raw.githubusercontent.com/JoomTools/plg_system_jtcfshowon/master/update.xml</server>
+	</updateservers>
+</extension>
