@@ -46,7 +46,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 	protected $autoloadLanguage = true;
 
 	/**
-	 * Adds additional field showon to the (article|category) editing form.
+	 * Adds additional field showon to the (article|category)[ editing form.
 	 *
 	 * @param   Form   $form  The form to be altered.
 	 * @param   mixed  $data  The associated data for the form.
@@ -61,7 +61,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			$form->getName(),
 			array(
 				'com_fields.field.com_content.article',
-				'com_fields.field.com_content.category',
+				'com_fields.field.com_content.categories',
 				),
 			true))
 		{
@@ -93,7 +93,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			$context,
 			array(
 				'com_content.article',
-				'com_content.category',
+				'com_content.categories',
 			),
 			true))
 		{
