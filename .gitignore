@@ -42,6 +42,7 @@ phing-latest.phar
 # composer
 composer.phar
 vendor/*
+composer.lock
 
 # Robo
 robo.phar
