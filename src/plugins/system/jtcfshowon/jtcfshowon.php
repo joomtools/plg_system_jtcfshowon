@@ -15,7 +15,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Form\Form;
 use Joomla\Utilities\ArrayHelper;
-
+use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
 
 /**
  * @package      Joomla.Plugin
