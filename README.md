@@ -5,7 +5,8 @@
 
 ## Deutsche Anleitung
 <p>Das Plugin <strong>JT - Showon</strong> erweitert Customfields um die Möglichkeit, sie in Abhängigkeit von anderen Feldern darzustellen.</p>
-<p>Zuerst muss das Plugin <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases">hier</a> herunterladen, installiert und aktiviert werden.</p>
+<p><strong>Eine Außnahme bildet das SubformFeld ab, hier funktioniert das Showon nur auf das SubformFeld selber und nicht auf die darin verwendeten Felder.</strong></p>
+<p>Zuerst muss das Plugin <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases/latest">hier</a> heruntergeladen, installiert und aktiviert werden.</p>
 <p>Bei der Erstellung eines Customsfields erscheint daraufhin ein neues Eingabefeld "Showon".<br/>
 Dort wird als erstes der Name des Feldes eingegeben, von dem unser Feld abhängig sein soll. Durch einen Doppelpunkt getrennt wird der Wert des Feldes eingegeben. z.B. <strong>eltern-feld:1</strong><br/>
 Unser neues Feld erscheint nur, wenn das eltern-feld den Wert 1 hat.</p>
@@ -25,7 +26,8 @@ Beispeil: <strong>eltern-feldA:1[OR]eltern-feldB:1</strong></p>
 
 ## English Manual
 <p>The plugin <strong>JT - Showon</strong> extends the customfields with a new functionality to show the field in dependence of of another customfield.</p>
-<p>First you have to <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases">download</a>, install and aktivate the plugin.</p>
+<p><strong>An exception is the subform field, here the showon only works on the subform field itself and not on the fields used in it.</strong></p>
+<p>First you have to <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases/latest">download</a>, install and aktivate the plugin.</p>
 <p>In the custimfields settings you have a new formfield "showon".<br/>
 First you type the name of your customfield the field should depend on. Separated by a colon you write the value. f.e. parent-field:1<br/>
 Our new field only appears if the parent-field has the value 1.</p>
