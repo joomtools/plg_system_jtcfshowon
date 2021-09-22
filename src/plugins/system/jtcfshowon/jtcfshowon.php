@@ -11,9 +11,15 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
+if (version_compare(JVERSION, 4, 'lt'))
+{
+	\JLoader::registerNamespace('\\Joomla\\Component\\Fields\\Administrator\\Helper\\FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
+}
+
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Form\Form;
+use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
 use Joomla\Utilities\ArrayHelper;
 
 
