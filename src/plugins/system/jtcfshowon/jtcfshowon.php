@@ -11,15 +11,14 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-if (version_compare(JVERSION, 4, 'lt'))
+if (version_compare(JVERSION, 4, 'ge'))
 {
-	\JLoader::registerNamespace('\\Joomla\\Component\\Fields\\Administrator\\Helper\\FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
+	\JLoader::registerAlias('FieldsHelper', '\\Joomla\\Component\\Fields\\Administrator\\Helper\\FieldsHelper');
 }
 
-use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Form\Form;
-use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
+use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Utilities\ArrayHelper;
 
 
@@ -75,7 +74,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 		}
 
 		$fieldParams = JPATH_PLUGINS . '/' . $this->_type . '/' . $this->_name . '/xml/showon.xml';
-		$showonXml = new SimpleXMLElement($fieldParams, 0, true);
+		$showonXml = new \SimpleXMLElement($fieldParams, 0, true);
 
 		$form->setField($showonXml);
 
@@ -111,7 +110,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			return true;
 		}
 
-		$showon = [];
+		$showon       = [];
 		$showon['or'] = explode('[OR]', $_showon);
 
 		if (!empty($showon['or']))
@@ -121,7 +120,8 @@ class PlgSystemJtcfshowon extends CMSPlugin
 				if (stripos($value, '[AND]') !== false)
 				{
 					list($or, $and) = explode('[AND]', $value, 2);
-					$showon['and'] = explode('[AND]', $and);
+
+					$showon['and']      = explode('[AND]', $and);
 					$showon['or'][$key] = $or;
 				}
 			}
@@ -148,6 +148,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 					if (empty($itemFields[$fieldName]) || $itemFields[$fieldName]->rawvalue != $fieldValue)
 					{
 						$showField = false;
+
 						$field->params->set('display', 0);
 					}
 				}
