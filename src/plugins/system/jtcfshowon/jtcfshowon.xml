@@ -15,6 +15,6 @@
 	</files>
 
 	<updateservers>
-		<server type="extension" priority="1" name="PLG_JTCFSHOWON_XML_NAME">https://raw.githubusercontent.com/JoomTools/plg_system_jtcfshowon/master/update.xml</server>
+		<server type="extension" priority="1" name="PLG_JTCFSHOWON_XML_NAME">https://raw.githubusercontent.com/joomtools/plg_system_jtcfshowon/master/update.xml</server>
 	</updateservers>
 </extension>
