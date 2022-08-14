@@ -1,7 +1,11 @@
 # Joomla! System - Plugin - JT CF Showon
+[![Joomla 3](https://img.shields.io/badge/Joomla™-3.10-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms) [![Joomla 4](https://img.shields.io/badge/Joomla™-4.1-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms)  
+![PHP5.6](https://img.shields.io/badge/PHP-5.6-darkgreen?logo=php&style=for-the-badge) ![PHP7.0](https://img.shields.io/badge/PHP-7.0-darkgreen?logo=php&style=for-the-badge) ![PHP7.1](https://img.shields.io/badge/PHP-7.1-darkgreen?logo=php&style=for-the-badge) ![PHP7.2](https://img.shields.io/badge/PHP-7.2-darkgreen?logo=php&style=for-the-badge) ![PHP7.4](https://img.shields.io/badge/PHP-7.4-darkgreen?logo=php&style=for-the-badge) ![PHP8.0](https://img.shields.io/badge/PHP-8.0-darkgreen?logo=php&style=for-the-badge) ![PHP8.1](https://img.shields.io/badge/PHP-8.1-darkgreen?logo=php&style=for-the-badge)  
+
+
 ## Anleitung / Manual
 <details>
-  <summary>Deutsch/German</summary>
+  <summary>Deutsch / German</summary>
 
 ## Deutsche Anleitung
 <p>Das Plugin <strong>JT - Showon</strong> erweitert Customfields um die Möglichkeit, sie in Abhängigkeit von anderen Feldern darzustellen.</p>
@@ -18,11 +22,12 @@ Beispeil: <strong>eltern-feldA:1[AND]eltern-feldB:1</strong><br>
 Verknüpfung mit [OR].<br/>
 Beispeil: <strong>eltern-feldA:1[OR]eltern-feldB:1</strong></p>
 <p>Wichtig hierbei, [AND] und [OR] sollten immer in Großbuchstaben und ohne Leerzeichen, davor oder danach, verwendet werden.</p>
-<p><strong>Mindestvoraussetzungen</strong></p><ul><li>Joomla! 3.9</li><li>PHP 5.6</li></ul><p><strong>Author:</strong> Guido De Gobbis<br/><strong>Copyright:</strong> © <a href="https://github.com/JoomTools" target="_blank">JoomTools.de</a><br/><strong>Plugin-Lizenz:</strong> <a href="https:/www.gnu.org/licenses/gpl-3.0.de.html" target="_blank">GNU/GPLv3</a><br/><strong>Plugin-Version:</strong> <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases">herunterladen</a></p>
+<p>Eine vollständige Erklärung der Funktionsweise kann in der <a href="https://docs.joomla.org/Form_field/de#Showon" target="_blank">Joomla! Dokumentation</a> nachgelesen werden.</p>
+<p><strong>Author:</strong> Guido De Gobbis<br/><strong>Copyright:</strong> © <a href="https://github.com/JoomTools" target="_blank">JoomTools.de</a><br/><strong>Plugin-Lizenz:</strong> <a href="https:/www.gnu.org/licenses/gpl-3.0.de.html" target="_blank">GNU/GPLv3</a><br/><strong>Plugin-Version:</strong> <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases">herunterladen</a></p>
 </details>
 
 <details>
-  <summary>Englisch/English</summary>
+  <summary>Englisch / English</summary>
 
 ## English Manual
 <p>The plugin <strong>JT - Showon</strong> extends the customfields with a new functionality to show the field in dependence of of another customfield.</p>
@@ -39,5 +44,6 @@ Example: parent-fieldA:1[AND]parent-fieldB:1<br>
 Link with [OR].<br/>
 Example: parent-fieldA:1[OR]parent-fieldB:1</p>
 <p>Important here, [AND] and [OR] should always be used in capital letters and without spaces before or after them.</p>
-<p><strong>Minimum requirements</strong></p><ul><li>Joomla! 3.9</li><li>PHP 5.6</li></ul><p><strong>Author:</strong> Guido De Gobbis<br/><strong>Copyright:</strong> © <a href="https://github.com/JoomTools" target="_blank">JoomTools.de</a><br/><strong>Plugin licens:</strong> <a href="https:/www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU/GPLv3</a><br/><strong>Download</strong> <a href="https://github.com/JoomTools/plg_content_jteasylink/releases/latest">latest Version</a></p>
+<p>A full explanation of how it works can be found in the <a href="https://docs.joomla.org/Form_field#Showon" target="_blank">Joomla! documentation</a>.</p>
+<p><strong>Author:</strong> Guido De Gobbis<br/><strong>Copyright:</strong> © <a href="https://github.com/JoomTools" target="_blank">JoomTools.de</a><br/><strong>Plugin licens:</strong> <a href="https:/www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU/GPLv3</a><br/><strong>Download</strong> <a href="https://github.com/JoomTools/plg_content_jteasylink/releases/latest">latest Version</a></p>
 </details>
