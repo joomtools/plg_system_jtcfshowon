@@ -213,6 +213,11 @@ class PlgSystemJtcfshowon extends CMSPlugin
 	 */
 	public function onContentPrepare($context, &$item, &$params, $page = 0)
 	{
+		if (empty($item->jcfields))
+		{
+			return;
+		}
+
 		if (!in_array($context, array('com_users.profile', 'com_users.user')))
 		{
 			foreach ($item->jcfields as $key => $cfield)
