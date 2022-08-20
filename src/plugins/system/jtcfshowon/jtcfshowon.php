@@ -252,14 +252,12 @@ class PlgSystemJtcfshowon extends CMSPlugin
 	 *
 	 * @param   object   $view           The item object.
 	 * @param   string   $context        The context of the content being passed to the plugin.
-	 * @param   string   $extensionName
-	 * @param   string   $section
 	 *
 	 * @return  void
 	 *
 	 * @since   1.0.3
 	 */
-	public function onBeforeDisplay($view, $context, $extensionName, $section)
+	public function onBeforeDisplay($view, $context)
 	{
 		if ($context == 'com_users.profile')
 		{
