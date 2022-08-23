@@ -117,26 +117,9 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			return true;
 		}
 
-		if (empty($_showon = $field->fieldparams->get('showon', null)))
+		if (empty($showOn = $field->fieldparams->get('showon', null)))
 		{
 			return true;
-		}
-
-		$showon       = [];
-		$showon['or'] = explode('[OR]', $_showon);
-
-		if (!empty($showon['or']))
-		{
-			foreach ($showon['or'] as $key => $value)
-			{
-				if (stripos($value, '[AND]') !== false)
-				{
-					list($or, $and) = explode('[AND]', $value, 2);
-
-					$showon['and']      = explode('[AND]', $and);
-					$showon['or'][$key] = $or;
-				}
-			}
 		}
 
 		$uniqueItemId = md5($item->id);
@@ -146,45 +129,13 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			self::$itemFields[$uniqueItemId] = ArrayHelper::pivot(FieldsHelper::getFields($context, $item), 'name');
 		}
 
-		$itemFields = self::$itemFields[$uniqueItemId];
-		$showField  = true;
-
-		if (!empty($showon['and']))
-		{
-			foreach ($showon['and'] as $value)
-			{
-				if ($showField === true)
-				{
-					list($fieldName, $fieldValue) = explode(':', $value);
-
-					if (empty($itemFields[$fieldName]) || $itemFields[$fieldName]->rawvalue != $fieldValue)
-					{
-						$showField             = false;
-						self::$unshownFields[] = $field->name;
-					}
-				}
-			}
-		}
-
-		if ($showField === true)
-		{
-			foreach ($showon['or'] as $value)
-			{
-				list($fieldName, $fieldValue) = explode(':', $value);
-
-				$showFieldOr[] = (!empty($itemFields[$fieldName]) && $itemFields[$fieldName]->rawvalue == $fieldValue);
-			}
-
-			if (!in_array(true, $showFieldOr))
-			{
-				$showField             = false;
-				self::$unshownFields[] = $field->name;
-			}
-		}
+		$showField = $this->fieldIsShownValidation($showOn, $uniqueItemId);
 
 		if ($showField === false)
 		{
 			$field->params->set('display', 0);
+
+			self::$unshownFields[] = $field->name;
 
 			if ($context == 'com_users.user'
 				&& version_compare(JVERSION, '4', 'lt')
@@ -197,6 +148,96 @@ class PlgSystemJtcfshowon extends CMSPlugin
 		}
 
 		return true;
+	}
+
+	/**
+	 * Evaluate showon values
+	 *
+	 * @param   string  $showOn        The value of the show on attribute.
+	 * @param   string  $uniqueItemId  The unique item id.
+	 *
+	 * @return  bool
+	 *
+	 * @since  1.0.5
+	 */
+	private function fieldIsShownValidation($showOn, $uniqueItemId)
+	{
+		$regex = array(
+			'search' => array(
+				'[AND]',
+				'[OR]',
+			),
+			'replace' => array(
+				' [AND]',
+				' [OR]',
+			),
+		);
+
+		$showOn                = str_replace($regex['search'], $regex['replace'], $showOn);
+		$showOnValidationRules = (array) explode(' ', $showOn);
+		$valuesSum             = count($showOnValidationRules) - 1;
+		$conditionValid        = array();
+		$isShown               = false;
+
+		if (empty($showOnValidationRules))
+		{
+			return false;
+		}
+
+		foreach ($showOnValidationRules as $key => $rule)
+		{
+			$not       = false;
+			$glue      = '';
+			$separator = ':';
+
+			if (strpos($rule, '[OR]') !== false)
+			{
+				$glue      = 'or';
+				$rule = strtr($rule, array('[OR]' => ''));
+			}
+
+			if (strpos($rule, '[AND]') !== false)
+			{
+				$glue = 'and';
+				$rule = strtr($rule, array('[AND]' => ''));
+			}
+
+			if (strpos($rule, '!') !== false)
+			{
+				$not       = true;
+				$separator = '!:';
+			}
+
+			list($fieldName, $expectedValue) = explode($separator, $rule);
+
+			$fieldValue      = (array) self::$itemFields[$uniqueItemId][$fieldName]->rawvalue;
+			$valueValidation = (($not === false && in_array($expectedValue, $fieldValue))
+				|| ($not === true && !in_array($expectedValue, $fieldValue)));
+
+			if ($glue === '')
+			{
+				if ((int) $key === (int) $valuesSum)
+				{
+					return $valueValidation;
+				}
+
+				$conditionValid[$key] = $valueValidation;
+			}
+
+			if ($glue == 'and')
+			{
+				$isShown              = $conditionValid[$key - 1] && $valueValidation;
+				$conditionValid[$key] = $isShown;
+			}
+
+			if ($glue == 'or')
+			{
+				$isShown              = $conditionValid[$key - 1] || $valueValidation;
+				$conditionValid[$key] = $isShown;
+			}
+		}
+
+		return $isShown;
 	}
 
 	/**
