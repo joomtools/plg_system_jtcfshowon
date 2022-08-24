@@ -213,6 +213,8 @@ class PlgSystemJtcfshowon extends CMSPlugin
 			if(!isset(self::$itemFields[$uniqueItemId][$fieldName])) {
 				return true;
 			}
+			
+			$fieldValue = (array) self::$itemFields[$uniqueItemId][$fieldName]->rawvalue;
 
 			$valueValidation = (($not === false && in_array($expectedValue, $fieldValue))
 				|| ($not === true && !in_array($expectedValue, $fieldValue)));
