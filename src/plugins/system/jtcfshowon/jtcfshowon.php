@@ -156,7 +156,7 @@ class PlgSystemJtcfshowon extends CMSPlugin
 	 * @param   string  $showOn        The value of the show on attribute.
 	 * @param   string  $uniqueItemId  The unique item id.
 	 *
-	 * @return  bool
+	 * @return  bool  Return true if the field is shown.
 	 *
 	 * @since  1.0.5
 	 */
@@ -175,14 +175,15 @@ class PlgSystemJtcfshowon extends CMSPlugin
 
 		$showOn                = str_replace($regex['search'], $regex['replace'], $showOn);
 		$showOnValidationRules = (array) explode(' ', $showOn);
-		$valuesSum             = count($showOnValidationRules) - 1;
-		$conditionValid        = array();
-		$isShown               = false;
 
 		if (empty($showOnValidationRules))
 		{
-			return false;
+			return true;
 		}
+
+		$valuesSum      = count($showOnValidationRules) - 1;
+		$conditionValid = array();
+		$isShown        = true;
 
 		foreach ($showOnValidationRules as $key => $rule)
 		{
@@ -210,11 +211,12 @@ class PlgSystemJtcfshowon extends CMSPlugin
 
 			list($fieldName, $expectedValue) = explode($separator, $rule);
 
-			if(!isset(self::$itemFields[$uniqueItemId][$fieldName])) {
-				return true;
+			$fieldValue = array();
+
+			if (isset(self::$itemFields[$uniqueItemId][$fieldName]))
+			{
+				$fieldValue = (array) self::$itemFields[$uniqueItemId][$fieldName]->rawvalue;
 			}
-			
-			$fieldValue = (array) self::$itemFields[$uniqueItemId][$fieldName]->rawvalue;
 
 			$valueValidation = (($not === false && in_array($expectedValue, $fieldValue))
 				|| ($not === true && !in_array($expectedValue, $fieldValue)));
