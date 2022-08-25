@@ -7,16 +7,16 @@
 		<type>plugin</type>
 		<folder>system</folder>
 		<client>site</client>
-		<version>1.0.5</version>
+		<version>1.0.6</version>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/joomtools/plg_system_jtcfshowon/releases/download/1.0.5/plg_system_jtcfshowon-1.0.5.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/joomtools/plg_system_jtcfshowon/releases/download/1.0.6/plg_system_jtcfshowon-1.0.6.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
-		<sha256>3d80a870ce7b275c0beedee56bd2b4161bbfdd953ddd8b24a533356793c71afc</sha256>
-		<sha384>8a3545a1da261200e44d40479c6cefd459af1952b05fe60599af52f15b04113dde92550d5e3fe53e43125f85b1f4ad6f</sha384>
-		<sha512>0c3fae96b7d5e721c551933a5dbe01908751124cd7b28d0ee982561842620cf2709aee0ea2f182174846c308e6417b0ef0b8c21d5a3b36fbb80aa449194e6b3d</sha512>
+		<sha256>9a48da66848f0e67311a7fbda795eb1e5335e9a1fbd92ffb6f881de47e395622</sha256>
+		<sha384>3c77f4e36d1b454664959f25243fa103a5e43e9a9896f0e4ab4a25ecafe1ed86eaa726028074058a0fc960402533cd1c</sha384>
+		<sha512>940c4ac622b6aa3f97171704b9928f6fbb8faeee18b92ffd400a06b003b4ed42401896828905012e58d37dab46bdf83272c76d02dabc4fc07a074f81df2e201b</sha512>
 		<maintainer>Guido De Gobbis</maintainer>
 		<php_minimum>5.6</php_minimum>
 		<targetplatform name="joomla" version="3.(9|10)"/>
@@ -28,16 +28,16 @@
 		<type>plugin</type>
 		<folder>system</folder>
 		<client>site</client>
-		<version>1.0.5</version>
+		<version>1.0.6</version>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/joomtools/plg_system_jtcfshowon/releases/download/1.0.5/plg_system_jtcfshowon-1.0.5.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/joomtools/plg_system_jtcfshowon/releases/download/1.0.6/plg_system_jtcfshowon-1.0.6.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
-		<sha256>3d80a870ce7b275c0beedee56bd2b4161bbfdd953ddd8b24a533356793c71afc</sha256>
-		<sha384>8a3545a1da261200e44d40479c6cefd459af1952b05fe60599af52f15b04113dde92550d5e3fe53e43125f85b1f4ad6f</sha384>
-		<sha512>0c3fae96b7d5e721c551933a5dbe01908751124cd7b28d0ee982561842620cf2709aee0ea2f182174846c308e6417b0ef0b8c21d5a3b36fbb80aa449194e6b3d</sha512>
+		<sha256>9a48da66848f0e67311a7fbda795eb1e5335e9a1fbd92ffb6f881de47e395622</sha256>
+		<sha384>3c77f4e36d1b454664959f25243fa103a5e43e9a9896f0e4ab4a25ecafe1ed86eaa726028074058a0fc960402533cd1c</sha384>
+		<sha512>940c4ac622b6aa3f97171704b9928f6fbb8faeee18b92ffd400a06b003b4ed42401896828905012e58d37dab46bdf83272c76d02dabc4fc07a074f81df2e201b</sha512>
 		<maintainer>Guido De Gobbis</maintainer>
 		<php_minimum>5.6</php_minimum>
 		<targetplatform name="joomla" version="4.[01]"/>
