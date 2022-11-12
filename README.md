@@ -1,13 +1,14 @@
 # Joomla! System - Plugin - JT CF Showon
-[![Joomla 3](https://img.shields.io/badge/Joomla™-3.10-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms) [![Joomla 4](https://img.shields.io/badge/Joomla™-4.1-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms)  
-![PHP5.6](https://img.shields.io/badge/PHP-5.6-darkgreen?logo=php&style=for-the-badge) ![PHP7.0](https://img.shields.io/badge/PHP-7.0-darkgreen?logo=php&style=for-the-badge) ![PHP7.1](https://img.shields.io/badge/PHP-7.1-darkgreen?logo=php&style=for-the-badge) ![PHP7.2](https://img.shields.io/badge/PHP-7.2-darkgreen?logo=php&style=for-the-badge) ![PHP7.4](https://img.shields.io/badge/PHP-7.4-darkgreen?logo=php&style=for-the-badge) ![PHP8.0](https://img.shields.io/badge/PHP-8.0-darkgreen?logo=php&style=for-the-badge) ![PHP8.1](https://img.shields.io/badge/PHP-8.1-darkgreen?logo=php&style=for-the-badge)  
+[![Joomla 3](https://img.shields.io/badge/Joomla™-3.10-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms) [![Joomla 4](https://img.shields.io/badge/Joomla™-4.x-darkgreen?logo=joomla&logoColor=c2c9d6&style=for-the-badge)](https://downloads.joomla.org/cms)  
+![PHP5.6](https://img.shields.io/badge/PHP-5.6-darkgreen?logo=php&style=for-the-badge) ![PHP7.x](https://img.shields.io/badge/PHP-7.x-darkgreen?logo=php&style=for-the-badge) ![PHP8.0](https://img.shields.io/badge/PHP-8.0-darkgreen?logo=php&style=for-the-badge) ![PHP8.1](https://img.shields.io/badge/PHP-8.1-darkgreen?logo=php&style=for-the-badge)  
 
+### [Downloads](https://github.com/joomtools/plg_system_jtcfshowon/releases)
 
-## Anleitung / Manual
+#### Anleitung / Manual
 <details>
   <summary>Deutsch / German</summary>
 
-## Deutsche Anleitung
+#### Deutsche Anleitung
 <p>Das Plugin <strong>JT - Showon</strong> erweitert Customfields um die Möglichkeit, sie in Abhängigkeit von anderen Feldern darzustellen.</p>
 <p><strong>Eine Außnahme bildet das SubformFeld ab, hier funktioniert das Showon nur auf das SubformFeld selber und nicht auf die darin verwendeten Felder.</strong></p>
 <p>Zuerst muss das Plugin <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases/latest">hier</a> heruntergeladen, installiert und aktiviert werden.</p>
@@ -29,7 +30,7 @@ Beispeil: <strong>eltern-feldA:1[OR]eltern-feldB:1</strong></p>
 <details>
   <summary>Englisch / English</summary>
 
-## English Manual
+#### English Manual
 <p>The plugin <strong>JT - Showon</strong> extends the customfields with a new functionality to show the field in dependence of of another customfield.</p>
 <p><strong>An exception is the subform field, here the showon only works on the subform field itself and not on the fields used in it.</strong></p>
 <p>First you have to <a href="https://github.com/JoomTools/plg_system_jtcfshowon/releases/latest">download</a>, install and aktivate the plugin.</p>
